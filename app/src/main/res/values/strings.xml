@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Food Truck Merchant</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_merchant_profile">MerchantProfile</string>
+    <string name="title_activity_location_get">LocationGet</string>
+    <string name="title_activity_location2">LocationActivity2</string>
+    <string name="title_activity_location_activity_final">LocationActivityFinal</string>
+    <string name="title_activity_dialog_catering">DialogCatering</string>
+    <string name="title_activity_dialog_reminder">DialogReminder</string>
+</resources>
