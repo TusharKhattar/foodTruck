@@ -2,7 +2,8 @@
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:tools="http://schemas.android.com/tools"
         xmlns:app="http://schemas.android.com/apk/res-auto" android:layout_width="match_parent"
-        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:layout_height="match_parent"
+    android:padding="4dp"
         android:orientation="vertical"
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         tools:showIn="@layout/activity_merchant_profile"
@@ -11,30 +12,36 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="300dp"
-        android:src="@android:drawable/alert_dark_frame"/>
+        android:background="#794545"
+        android:src="@drawable/foodtruckmockup"/>
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_margin="4dp"
             android:layout_weight="1"
             android:text="SHARE LOCATION"
             android:id="@+id/shareLocation"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="UPDATE MENUS"/>
+            android:layout_margin="4dp"
+            android:text="UPDATE MENUS"
+            android:id="@+id/update_menus"/>
 
         <Button
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="UPDATE WEEKLY UPDATES"/>
+            android:text="WEEKLY UPDATES"
+            android:id="@+id/update_weekly_update"/>
     </LinearLayout>
 
 </LinearLayout>

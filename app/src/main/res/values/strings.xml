@@ -7,4 +7,35 @@
     <string name="title_activity_location_activity_final">LocationActivityFinal</string>
     <string name="title_activity_dialog_catering">DialogCatering</string>
     <string name="title_activity_dialog_reminder">DialogReminder</string>
+    <string name="title_activity_weekly_schedule">WeeklySchedule</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="title_activity_schedule_weekly">ScheduleWeekly</string>
+    <string name="title_activity_weekly__schedule__slider_tab_layout">
+        Weekly_Schedule_SliderTabLayout
+    </string>
+    <string name="title_activity_weekly__schedule__slider__tab_layout">
+        Weekly_Schedule_Slider_TabLayout
+    </string>
+    <string name="section_format">Hello World from section: %1$d</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_show_day_schedule">Map</string>
+
+
+    <string-array name="probable_time">
+        <item>12 noon</item>
+        <item>1 pm</item>
+        <item>2 pm</item>
+        <item>3 pm</item>
+        <item>4 pm</item>
+        <item>5 pm</item>
+        <item>6 pm</item>
+        <item>7 pm</item>
+        <item>8 pm</item>
+        <item>9 pm</item>
+    </string-array>
+
 </resources>

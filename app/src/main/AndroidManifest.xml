@@ -30,11 +30,6 @@
             android:label="@string/title_activity_location2"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
-        <activity
-            android:name=".LocationActivityFinal"
-            android:label="@string/title_activity_location_activity_final"
-            android:theme="@style/AppTheme.NoActionBar" >
-        </activity>
 
         <service
             android:name=".MerchantLocationService"
@@ -52,11 +47,41 @@
             android:label="@string/title_activity_dialog_catering"
             android:theme="@android:style/Theme.Dialog" >
         </activity>
-
         <activity
             android:name=".DialogReminder"
             android:label="@string/title_activity_dialog_reminder"
             android:theme="@android:style/Theme.Dialog" >
+        </activity>
+        <activity
+            android:name=".ScheduleWeekly"
+            android:label="@string/title_activity_schedule_weekly"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".Weekly_Schedule_SliderTabLayout"
+            android:label="@string/title_activity_weekly__schedule__slider_tab_layout"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <activity
+            android:name=".Weekly_Schedule_Slider_TabLayout"
+            android:label="@string/title_activity_weekly__schedule__slider__tab_layout"
+            android:theme="@style/AppTheme.NoActionBar" >
+        </activity>
+        <!--
+             The API key for Google Maps-based APIs is defined as a string resource.
+             (See the file "res/values/google_maps_api.xml").
+             Note that the API key is linked to the encryption key used to sign the APK.
+             You need a different API key for each encryption key, including the release key that is used to
+             sign the APK for publishing.
+             You can define the keys for the debug and release targets in src/debug/ and src/release/. 
+        -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".ShowDaySchedule"
+            android:label="@string/title_activity_show_day_schedule" >
         </activity>
     </application>
 

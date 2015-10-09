@@ -9,6 +9,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.api.GoogleApiClient;
@@ -32,6 +33,11 @@ public class MerchantProfile extends AppCompatActivity implements View.OnClickLi
 
     protected LocationChangedListener mLocationChangedListener;
 
+    @Override
+    public void onClick(View v) {
+
+    }
+
     public interface LocationChangedListener{
         void sendLocations(String oldLocation,String newLocation);
     }
@@ -40,6 +46,11 @@ public class MerchantProfile extends AppCompatActivity implements View.OnClickLi
         this.mLocationChangedListener = mLocationChangedListener;
     }
 
+    Button shareLocation;
+    Button updateFoodMenu;
+    Button update_weekly_update;
+    FloatingActionButton fab;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -47,17 +58,44 @@ public class MerchantProfile extends AppCompatActivity implements View.OnClickLi
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Button shareLocation_button= (Button) findViewById(R.id.shareLocation);
-        shareLocation_button.setOnClickListener(this);
 
+        shareLocation= (Button) findViewById(R.id.shareLocation);
+        updateFoodMenu= (Button) findViewById(R.id.update_menus);
+        update_weekly_update= (Button) findViewById(R.id.update_weekly_update);
+        fab= (FloatingActionButton) findViewById(R.id.fab);
+
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"Now Relax!! You will be reminded if u forget to update your location",Toast.LENGTH_LONG).show();
+            }
+        });
+
+        shareLocation.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(getApplicationContext(),"A post call has been written but not made",Toast.LENGTH_LONG ).show();
+            }
+        });
+
+        updateFoodMenu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+            }
+        });
+
+        update_weekly_update.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent i=new Intent(getApplicationContext(),Weekly_Schedule_Slider_TabLayout.class);
+                startActivity(i);
+            }
+        });
 
     }
 
-    @Override
-    public void onClick(View v) {
-        Intent i=new Intent(this,LocationActivity2.class);
-        startActivity(i);
-    }
+
 
     protected synchronized void buildGoogleApiClient(){
         mGoogleApiClient = new GoogleApiClient.Builder(this)

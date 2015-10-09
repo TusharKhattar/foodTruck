@@ -19,10 +19,13 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        Intent intent=new Intent(this,MerchantLocationService.class);
-        startService(intent);
+//        Intent intent=new Intent(this,MerchantLocationService.class);
+//        startService(intent);
+//
+//        Intent i=new Intent(this,DialogCatering.class);
+//        startActivity(i);
 
-        Intent i=new Intent(this,DialogCatering.class);
+        Intent i=new Intent(this,MerchantProfile.class);
         startActivity(i);
 
 

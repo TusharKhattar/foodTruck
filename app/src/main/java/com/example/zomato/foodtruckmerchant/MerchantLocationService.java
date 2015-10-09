@@ -88,15 +88,6 @@ public class MerchantLocationService extends IntentService implements FusedLocat
 
             new FusedLocationService(getApplicationContext(), this);
 
-            if (!isFoodTruckMoving("", "")) {
-                Intent i = new Intent();
-                i.setAction(ACTION_FOO);
-                i.putExtra(STATUS, "whetherCatering");
-                sendBroadcast(i);
-            } else {
-                stopSelf();
-            }
-
             try {
                 Thread.sleep(4000);
             } catch (InterruptedException e) {
@@ -121,16 +112,28 @@ public class MerchantLocationService extends IntentService implements FusedLocat
         return isMoving;
     }
 
+    boolean isMoving=true;
+    int count=0;
     @Override
     public void onReceiveLocation(Location location) {
         mOldLocation=mNewLocation;
+        Log.i("uuuuuu","Old location : "+mOldLocation.getLatitude());
         mNewLocation=location;
+        Log.i("uuuuuu","New location : "+mNewLocation.getLatitude());
         if(mOldLocation==mNewLocation){
-            isMoving=true;
-        }else{
             isMoving=false;
+            count++;
+        }else{
+            isMoving=true;
+            count=0;
         }
-        
+        if(count==10){
+            Intent i = new Intent();
+            i.setAction(ACTION_FOO);
+            i.putExtra(STATUS, "whetherCatering");
+            sendBroadcast(i);
+        }
+
     }
 
     @Override
